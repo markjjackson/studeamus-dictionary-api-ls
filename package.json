@@ -1,0 +1,38 @@
+{
+  "name": "studeamus-dictionary-api",
+  "version": "0.0.1",
+  "description": "Studeamus dictionary applet API",
+  "main": "app.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha ./test --recursive",
+    "start": "node ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markjjackson/studeamus-dictionary-api.git"
+  },
+  "keywords": [
+    "studeamus",
+    "dictionary",
+    "api",
+    "latin",
+    "grammar",
+    "learning",
+    "materials"
+  ],
+  "author": "Mark Jackson (mark.j.jackson@me.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markjjackson/studeamus-dictionary-api/issues"
+  },
+  "homepage": "https://github.com/markjjackson/studeamus-dictionary-api#readme",
+  "devDependencies": {
+    "mocha": "^3.5.0"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31",
+    "ramda": "^0.24.1"
+  }
+}
