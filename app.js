@@ -29,10 +29,19 @@ app.get('/', (req, res) => {
 app.get('/word', (req, res) => {
   const { query } = req
   const searchTerm = query.q
+  let searchQuery = searchTerm.length < 2 ? '' : new RegExp(`^${searchTerm}.*`) 
+  switch(searchTerm) {
+    case 'a':
+      searchQuery = new RegExp(`^a[1-9]$`) 
+      break;
+    case 'e':
+    searchQuery = new RegExp(`^e[1-9]$`) 
+      break;
+  }
 
   MongoClient.connect(constructMongoUri(env), (err, db) => {
     db.collection('ls')
-      .find({ key: new RegExp(`^${query.q}.*`) })
+      .find({ key: searchQuery })
       .toArray((err, items) => {
         err ? console.log(err) : res.send(items)
         db.close()
