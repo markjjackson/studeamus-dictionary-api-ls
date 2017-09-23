@@ -31,8 +31,8 @@ app.get('/word', (req, res) => {
   const searchTerm = query.q
 
   MongoClient.connect(constructMongoUri(env), (err, db) => {
-    db.collection('words')
-      .find({ latin: new RegExp(`^${query.q}.*`) })
+    db.collection('ls')
+      .find({ key: new RegExp(`^${query.q}.*`) })
       .toArray((err, items) => {
         err ? console.log(err) : res.send(items)
         db.close()

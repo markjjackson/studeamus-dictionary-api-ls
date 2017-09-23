@@ -1,7 +1,7 @@
 {
-  "name": "studeamus-dictionary-api",
+  "name": "studeamus-dictionary-api-ls",
   "version": "0.0.1",
-  "description": "Studeamus dictionary applet API",
+  "description": "Studeamus dictionary applet API with Lewis & Short",
   "main": "app.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ./test --recursive",
